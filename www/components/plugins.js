@@ -50,3 +50,5 @@ $(document).on("click","#b5",function(){
     }
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 });
+
+//testee commit
