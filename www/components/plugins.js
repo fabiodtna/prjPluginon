@@ -31,3 +31,22 @@ $(document).on("click","#b3",function(){
 $(document).on("click","#b4",function(){
     navigator.vibrate(2000);
 });
+
+// localizção 
+$(document).on("click","#b5",function(){
+    var onSuccess = function(position){
+      alert('Latidude: ' + position.coords.latitude + '\n'+
+           'Longitude: ' + position.coords.longitude + '\n'+
+           'Altitude: ' + position.coords.altitude + '\n' +
+           'Accuracy: ' + position.coords.accuracy + '\n' +
+           'Altitude Accuracy: ' + position.coords.altitudeAccuracy + '\n' +
+           'Heading: ' + position.coords.heading + '\n' +
+           'Speed: ' + position.coords.speed + '\n' + 
+           'Timestamp: ' + position.timestamp + '\n');
+    };
+    function onError(erro){
+      alert('code: ' + erro.code + '\n' +
+      'mensage: ' + error.menssage + '\n');
+    }
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+});
